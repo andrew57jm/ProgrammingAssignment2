@@ -1,12 +1,15 @@
-## Put comments here that give an overall description of what your
-## functions do
+## R Programming, Assignment 2
+## Functions for creating a matrix that caches its inverse
+## and for retrieveing the cached inverse or calculating it.
+
+
 
 ## creates a 'special' matrix that caches its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
     cacheInv <- NULL
     set <- function(y) {
-        # test that the input is a square matrix
+        # test that the input is a matrix
         if (!is.matrix(y)) stop("Input must be a matrix!")
         # test that the input matrix is square
         if (dim(y)[1]!=dim(y)[2]) stop("Input matrix must be square!")
